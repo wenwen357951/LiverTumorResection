@@ -11,4 +11,4 @@ if __name__ == '__main__':
     print(color2.red())
     print(color2.green())
     print(color2.blue())
-    print(color2.serialize())
+    print(color2.deserialize())
