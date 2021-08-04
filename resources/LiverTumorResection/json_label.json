@@ -1,0 +1,170 @@
+{
+  "0": {
+    "organ_name": "Right hepatic v",
+    "color": {
+      "r": 92,
+      "g": 82,
+      "b": 120
+    },
+    "index": {
+      "start": 2635,
+      "end": 3045
+    }
+  },
+  "1": {
+    "organ_name": "Left hepatic v",
+    "color": {
+      "r": 250,
+      "g": 80,
+      "b": 30
+    },
+    "index": {
+      "start": 2610,
+      "end": 2630
+    }
+  },
+  "2": {
+    "organ_name": "Intermediate hepatic v",
+    "color": {
+      "r": 176,
+      "g": 166,
+      "b": 240
+    },
+    "index": {
+      "start": 2635,
+      "end": 3050
+    }
+  },
+  "3": {
+    "organ_name": "Gallbladder",
+    "color": {
+      "r": 168,
+      "g": 173,
+      "b": 112
+    },
+    "index": {
+      "start": 2925,
+      "end": 3425
+    }
+  },
+  "4": {
+    "organ_name": "Cystic duct",
+    "color": {
+      "r": 99,
+      "g": 143,
+      "b": 56
+    },
+    "index": {
+      "start": 3020,
+      "end": 3080
+    }
+  },
+  "5": {
+    "organ_name": "Common bile duct",
+    "color": {
+      "r": 194,
+      "g": 196,
+      "b": 148
+    },
+    "index": {
+      "start": 3020,
+      "end": 3275
+    }
+  },
+  "6": {
+    "organ_name": "Splenic v.",
+    "color": {
+      "r": 168,
+      "g": 196,
+      "b": 196
+    },
+    "index": {
+      "start": 3040,
+      "end": 3280
+    }
+  },
+  "7": {
+    "organ_name": "Superior mesenteric v.",
+    "color": {
+      "r": 171,
+      "g": 176,
+      "b": 199
+    },
+    "index": {
+      "start": 2925,
+      "end": 3265
+    }
+  },
+  "8": {
+    "organ_name": "Common hepatic a.",
+    "color": {
+      "r": 0,
+      "g": 61,
+      "b": 110
+    },
+    "index": {
+      "start": 2990,
+      "end": 3015
+    }
+  },
+  "9": {
+    "organ_name": "Proper hepatic a.",
+    "color": {
+      "r": 0,
+      "g": 51,
+      "b": 171
+    },
+    "index": {
+      "start": 2965,
+      "end": 3015
+    }
+  },
+  "10": {
+    "organ_name": "Common hepatic duct",
+    "color": {
+      "r": 191,
+      "g": 209,
+      "b": 214
+    },
+    "index": {
+      "start": 2915,
+      "end": 3025
+    }
+  },
+  "11": {
+    "organ_name": "Right hepatic duct",
+    "color": {
+      "r": 97,
+      "g": 191,
+      "b": 26
+    },
+    "index": {
+      "start": 2720,
+      "end": 3015
+    }
+  },
+  "12": {
+    "organ_name": "Left hepatic duct",
+    "color": {
+      "r": 186,
+      "g": 232,
+      "b": 217
+    },
+    "index": {
+      "start": 2630,
+      "end": 2945
+    }
+  },
+  "13": {
+    "organ_name": "Inferior vena cava",
+    "color": {
+      "r": 181,
+      "g": 148,
+      "b": 161
+    },
+    "index": {
+      "start": 2560,
+      "end": 3795
+    }
+  }
+}

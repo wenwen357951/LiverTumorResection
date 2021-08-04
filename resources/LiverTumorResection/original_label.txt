@@ -1,0 +1,33 @@
+# right hepatic vein 
+Right hepatic v	92	82	120	2635	3045
+
+# left hepatic vein 
+Left hepatic v	250	80	30	2610	2630
+
+# middle hepatic vein 
+Intermediate hepatic v	176	166	240	2635	3050
+
+# gall bladder
+Gallbladder	168	173	112	2925	3425
+
+# cystic duct 
+Cystic duct	99	143	56	3020	3080
+
+# bile duct 
+Common bile duct	194	196	148	3020	3275
+
+# portal vein
+Splenic v.	168	196	196	3040	3280
+Superior mesenteric v.	171	176	199	2925	3265
+
+# hepatic artery
+Common hepatic a.	0	61	110	2990	3015
+Proper hepatic a.	0	51	171	2965	3015
+
+# hepatic duct
+Common hepatic duct	191	209	214	2915	3025
+Right hepatic duct	97	191	26	2720	3015
+Left hepatic duct	186	232	217	2630	2945
+
+# inferior vena cava
+Inferior vena cava	181	148	161	2560	3795
