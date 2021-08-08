@@ -1,9 +1,10 @@
 import json
+
 from trclab.serialize.ISerializable import ISerializable
 
 
 class RGBColor(ISerializable):
-    def __init__(self, r: int = 0, g: int = 0, b: int = 0, serialize_data: json = None):
+    def __init__(self, r: int = 0, g: int = 0, b: int = 0, serialize_data: str = None):
         self.serialize_data = serialize_data
         self.color = {
             "red": r if 0 <= r <= 255 else 0,
