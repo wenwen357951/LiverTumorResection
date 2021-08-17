@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from trclab.gui.tkWindow import ComponentType
+from trclab.gui.tkWindow.ComponentType import ComponentType
 from trclab.gui.tkWindow.components.Component import Component
 
 

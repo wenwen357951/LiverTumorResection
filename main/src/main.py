@@ -1,23 +1,11 @@
-import trclab.gui.tkWindow as tkWindow
-import trclab.gui.tkWindow.components as tkComponent
-from trclab.gui.tkWindow.components.Properties import Properties as tkProp
-from trclab.gui.tkWindow.layout.GridLayout import GridLayout as tkLayout
+import os
 
-# HelloWorld
+import docs.config as config
+import trclab.vhp as vhp
+
 if __name__ == '__main__':
-    button = tkComponent.Button("clickMe")
-    button.set(tkProp.TEXT, "ClickMe")
-    button.set(tkProp.ACTIVE_BACKGROUND_COLOR, "#fe0")
-    button.set(tkProp.BACKGROUND_COLOR, "#0ef")
-    button.set(tkProp.FOREGROUND_COLOR, "#fff")
-    button.layout(tkLayout.COLUMN, 0)
-    button.layout(tkLayout.ROW, 0)
-    tkWindowBuilder = tkWindow.Builder("HelloWorld", 800, 600)
-    tkWindowBuilder.append_component(button)
-    tkWindowBuilder.get_components_by_internal_name('clickMe')[0].set(tkProp.WIDTH, 10)
-    window = tkWindowBuilder.build()
-    window.display()
-
-    tkWindowBuilder2 = tkWindow.Builder(serialize_data=window.serialize())
-    tkWindowBuilder2.set_attr(tkWindow.Attributes.TITLE, "WEE")
-    tkWindowBuilder2.build().display()
+    seg_dataset = vhp.OrganDataset(config.ASSETS_LTR_VE_SEG_DIR, "*.bmp")
+    vhp_label = vhp.OrganLabel(os.path.join(config.MAIN_RESOURCES_LTR_DIR, "original_label.txt"))
+    seg_dataset.set_label(vhp_label)
+    seg_dataset.export_label_area(config.ASSETS_LTR_VE_CT_DIR, "*.jpg",
+                                  os.path.join(config.LOGS_DIR, 'ltr_ct.json'))

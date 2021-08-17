@@ -9,7 +9,7 @@ from trclab.serialize.ISerializable import ISerializable
 
 class TkWindow(ISerializable):
     def __init__(self, serialize_data: str = None):
-        self.extra_window = tk.Tk()
+        self.master = tk.Tk()
         self.displayable = False
         self.window_info = dict()
         self.components = list()
@@ -28,7 +28,7 @@ class TkWindow(ISerializable):
 
     def display(self) -> bool:
         if self.displayable:
-            self.extra_window.mainloop()
+            self.master.mainloop()
             return True
         return False
 
@@ -36,12 +36,12 @@ class TkWindow(ISerializable):
         return self.window_info[attr.value]
 
     def __build__(self):
-        self.extra_window.title(self.window_info[Attributes.TITLE.value])
-        self.extra_window.geometry(
+        self.master.title(self.window_info[Attributes.TITLE.value])
+        self.master.geometry(
             f'{self.window_info[Attributes.WIDTH.value]}x{self.window_info[Attributes.HEIGHT.value]}')
 
         for comp in self.components:
-            comp.create(self.extra_window)
+            comp.create(self.master)
 
         self.displayable = True
 
