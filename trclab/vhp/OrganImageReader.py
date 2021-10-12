@@ -2,14 +2,12 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from trclab.utils.ProgressBar import ProgressBar
 from trclab.vhp.OrganImage import OrganImage
 from trclab.vhp.OrganLabel import OrganLabel
 
 
 class OrganImageReader:
-    def __init__(self, image: OrganImage, label: OrganLabel, progressbar: ProgressBar):
-        self.progressbar = progressbar
+    def __init__(self, image: OrganImage, label: OrganLabel):
         self.organ_image = image
         self.image_rgb_list = []
         for rgb in image.get_rgb_list():
@@ -47,7 +45,7 @@ class OrganImageReader:
     def get_contours(self, filter_image):
         image_gray = cv2.cvtColor(filter_image, cv2.COLOR_BGR2GRAY)
         _, threshold = cv2.threshold(image_gray, self.threshold, 255, 0)
-        contours, _ = cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        contours, _ = cv2.findContours(threshold, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
         if len(contours) == 0:
             return None
 

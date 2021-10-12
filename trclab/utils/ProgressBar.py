@@ -12,14 +12,16 @@ class ProgressBar:
 
     def update(self, msg: str = "", just_message: bool = False):
         if not just_message:
-            self.counter += 1
+            if self.counter < self.max_val:
+                self.counter += 1
 
-        print("\r%s |%s>%s| %d%% | ETA: %s | %s" % (
+        print("\r\033[94m%s |%s>%s| %d%% | ETA: %s | %s" % (
             self.title, self.__start_len(), self.__end_len(), self.__percentage(), self.__curr_eta(), msg), end='')
 
     def finish(self, msg: str = ""):
         self.finish_time = time.time()
-        print("\r%s |%s>%s| %d%% | ETA: %s | %s" % (
+        self.counter = self.max_val
+        print("\r\033[92m%s |%s>%s| %d%% | ETA: %s | %s" % (
             self.title, self.__start_len(), self.__end_len(), self.__percentage(), self.__final_eta(), msg))
 
     def __start_len(self):
@@ -36,3 +38,6 @@ class ProgressBar:
 
     def __percentage(self):
         return 100 / (self.max_val / self.counter)
+
+    def add_max_val(self, value):
+        self.max_val += value
